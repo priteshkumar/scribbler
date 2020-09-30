@@ -1,25 +1,16 @@
 window.onload = function(){
-    /*function handleSignUp(e){
-        e.preventDefault();
-        var name = document.getElementById("InputName").value;
-        var username = document.getElementById("InputUserName").value;
-        var password = document.getElementById("InputPassword").value;
-        var confirmPassword = document.getElementById("InputPassword2").value;
-        if(name == ""){
-            
-        }
-        else if(username == ""){
-
-        }
-        else if(password == ""){
-
-        }
-        else if(confirmPassword == ""){
-
-        }
-    }
-
-    var signupModalButton = document.getElementById('modalsignup');
-    signupModalButton.addEventListener('click',handleSignUp);*/
-
+    console.log('executing common.js');
+    $('#ModalSignUp').on("hidden.bs.modal",function(e){
+        //e.preventDefault();
+        console.log('setting default form input values');
+        var signupForm = document.forms["signupform"];
+        var nameInput = signupForm.elements['InputName'];
+        nameInput.value = nameInput.defaultValue;
+        var usernameInput = signupForm.elements['InputUserName'];
+        usernameInput.value = usernameInput.defaultValue;
+        var passwordInput = signupForm.elements['InputPassword'];
+        passwordInput.value = passwordInput.defaultValue;
+        var passwordConfirmInput = signupForm.elements['InputConfirmPassword'];
+        passwordConfirmInput.value = passwordConfirmInput.defaultValue;
+    });
 };
