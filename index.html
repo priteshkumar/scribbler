@@ -4,9 +4,10 @@
 <head>
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
-    <link rel="stylesheet" href="./styles/index.css">
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/index.css">
     <link href="./styles/common.css" rel="stylesheet">
 </head>
 
@@ -17,10 +18,47 @@
         <h1 id="logo">ScriBBler</h1>
         <h3 id="subheading">Explore,Imagine,Create</h3>
         </div>
-        <button id="signup">Sign Up</button>
-        <button id="signin">Sign In</button>
+        <button type="button"  data-toggle="modal" data-target="#ModalSignUp" id="signup">Sign Up</button>
+        <button type="button"  data-toggle="modal" data-target="#ModalSignIn" id="signin">Sign In</button>
+        
+        <div class="modal fade" id="ModalSignUp" tabindex="-1" aria-labelledby="ModalSignUpLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="ModalSignUpLabel">Get Started</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+              <form onsubmit="return false">
+              <div class="form-group">
+              <label for="InputName">Name</label>
+              <input type="text" class="form-control" id="InputName" aria-describedby="nameHelp" required placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+              <label for="InputUserName">Username</label>
+              <input type="text" class="form-control" id="InputUserName" aria-describedby="usernameHelp" required placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+              <label for="InputPassword">Password</label>
+              <input type="password" class="form-control" id="InputPassword" required placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+              <label for="InputPassword2">Confirm Password</label>
+              <input type="password" class="form-control" id="InputPassword2" required placeholder="Re-enter your Password">
+            </div>
+            <button type="submit" class="btn btn-success btn-block" id="modalsignup">Sign Up</button>
+            </form>
+          </div>
+          </div>
+          </div>
+          </div>
+          
     </header>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   
 </body>
-
 </html>

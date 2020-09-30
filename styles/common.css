@@ -17,6 +17,7 @@
     font-weight:100;
     margin-top:0;
     margin-bottom:0;
+    font-size:2em;
 }
 
 #subheading{
@@ -44,4 +45,13 @@ button{
 #signin{
     margin-left:10px;
     margin-right:5px;
+}
+
+.form-control{
+    background-color:#F5F5F5;
+}
+
+#modalsignup{
+    margin-top:25px;
+    margin-bottom:15px;
 }
