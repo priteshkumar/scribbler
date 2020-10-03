@@ -1,0 +1,105 @@
+body{
+    background-color:#ffeedd;
+}
+
+#postscontainer{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    width:90%;
+    padding-top:2%;
+    margin:0 auto;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 20px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin-bottom:30px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .author{
+      flex:7%;
+      width:7%;
+      color:grey;
+      background-color:white;
+      text-align:center;
+      font-weight:700;
+      font-size:110%;
+  }
+  
+  .content{
+      flex:80%;
+      width:80%;
+      background-color:#F0F0F0;
+      border-radius:0px 20px 20px 0px;
+      display:flex;
+      flex-direction:column;
+      padding-bottom:1%;
+  }
+  
+  .subject{
+      color:grey;
+      font-size:125%;
+      font-weight:500;
+      display:flex;
+      flex-direction:row;
+      justify-content:space-between;
+      align-items:center;
+      padding-left:2.7%;
+      padding-right:2.5%;
+      margin-bottom:0px;
+  }
+  
+  .summary{
+      font-size:115%;
+      font-weight:100;
+      padding-left:2.7%;
+      margin-top:0;
+      padding-right:2%;
+      margin-bottom:0;
+      overflow: hidden;
+      line-height:1.2em;
+      max-height:3.6em;
+      margin-bottom:15px;
+      /*text-overflow: initial;
+     display: -webkit-box;
+     -webkit-line-clamp: 3; 
+     -webkit-box-orient: vertical;*/
+  }
+
+  .trashhover:hover{
+    cursor:pointer;
+  }
+
+  .customspan{
+      text-align: right;
+      padding-right:2.5%;
+      cursor:pointer;
+  }
+  
+  #postdialogue{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    flex:100%;
+    padding:1%;
+  }
+
+  #postbtndiv{
+      flex:100%;
+      width:100%;
+      padding:1%;
+      display:flex;
+      flex-direction:row;
+      justify-content: space-between;
+  }

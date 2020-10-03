@@ -9,6 +9,7 @@
     display:flex;
     flex-direction:column;
     justify-content: flex-start;
+    margin:5px;
 }
 
 #logo{
@@ -22,9 +23,10 @@
 
 #subheading{
     font-family: 'Ubuntu Mono', monospace;
-    font-weight:lighter;
-    font-size:16px;
+    font-weight:30;
+    font-size:15px;
     margin-top:0;
+    color:#404040;
 }
 
 button{
@@ -68,3 +70,11 @@ button{
     font-size:90%;
     font-weight:600;
 }
+
+.btn-lg{
+    padding-left:2rem;
+    padding-right:2rem;
+    border-radius:0;
+    font-size:1rem;
+    margin-bottom:5px;
+  }
