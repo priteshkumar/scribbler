@@ -2,92 +2,95 @@
 <html>
 
 <head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8fc3a4ee99.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="../styles/common.css" rel="stylesheet">
     <link href="../styles/postslist.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- TODO: Include code for header here -->
     <header id="masthead">
         <div id="heading">
-        <h1 id="logo">ScriBBler</h1>
-        <h3 id="subheading">Explore,Imagine,Create</h3>
+            <h1 id="logo">ScriBBler</h1>
+            <h3 id="subheading">Explore,Imagine,Create</h3>
         </div>
-        <button type="button"  data-toggle="modal" data-target="#ModalSignUp" id="signup">Sign Up</button>
-        <button type="button"  data-toggle="modal" data-target="#ModalSignIn" id="signin">Sign In</button>
-        
+        <button type="button" data-toggle="modal" data-target="#ModalSignUp" id="signup">Sign Up</button>
+        <button type="button" data-toggle="modal" data-target="#ModalSignIn" id="signin">Sign In</button>
+
         <div class="modal fade" id="ModalSignUp" tabindex="-1" aria-labelledby="ModalSignUpLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="ModalSignUpLabel">Get Started</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalSignUpLabel">Get Started</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form name="signupform" onsubmit="return false">
+                            <div class="form-group">
+                                <label for="InputName">Name</label>
+                                <input type="text" class="form-control" id="InputName" aria-describedby="nameHelp"
+                                    required placeholder="Enter your Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputUserName">Username</label>
+                                <input type="text" class="form-control" id="InputUserName"
+                                    aria-describedby="usernameHelp" required placeholder="Enter your username">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputPassword">Password</label>
+                                <input type="password" class="form-control" id="InputPassword" required
+                                    placeholder="Enter your password">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputConfirmPassword">Confirm Password</label>
+                                <input type="password" class="form-control" id="InputConfirmPassword" required
+                                    placeholder="Re-enter your Password">
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block" id="modalsignup-btn">Sign
+                                Up</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="modal-body">
-              <form name="signupform" onsubmit="return false">
-              <div class="form-group">
-              <label for="InputName">Name</label>
-              <input type="text" class="form-control" id="InputName" aria-describedby="nameHelp"  required placeholder="Enter your Name">
             </div>
-            <div class="form-group">
-              <label for="InputUserName">Username</label>
-              <input type="text" class="form-control" id="InputUserName" aria-describedby="usernameHelp" required placeholder="Enter your username">
-            </div>
-            <div class="form-group">
-              <label for="InputPassword">Password</label>
-              <input type="password" class="form-control" id="InputPassword" required placeholder="Enter your password">
-            </div>
-            <div class="form-group">
-              <label for="InputConfirmPassword">Confirm Password</label>
-              <input type="password" class="form-control" id="InputConfirmPassword" required placeholder="Re-enter your Password">
-            </div>
-            <button type="submit" class="btn btn-success btn-block" id="modalsignup-btn">Sign Up</button>
-            </form>
-          </div>
-          </div>
-          </div>
-          </div>
-    
-          <div class="modal fade" id="ModalSignIn" tabindex="-1" aria-labelledby="ModalSignInLabel" aria-hidden="true">
+        </div>
+
+        <div class="modal fade" id="ModalSignIn" tabindex="-1" aria-labelledby="ModalSignInLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="ModalSignInLabel">Welcome Back!</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalSignInLabel">Welcome Back!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form name="signinform" onsubmit="return false">
+                            <div class="form-group">
+                                <label for="InputUserNameSignIn">Username</label>
+                                <input type="text" class="form-control" id="InputUserNameSignIn"
+                                    aria-describedby="usernameHelp" required placeholder="Enter your username">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputPasswordSignIn">Password</label>
+                                <input type="password" class="form-control" id="InputPasswordSignIn" required
+                                    placeholder="Enter your password">
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block" id="modalsignin-btn">Sign
+                                In</button>
+                            <h6 id="footnote">Not a member? <a id="footlink" data-dismiss="modal" href="#">Sign up</a>
+                            </h6>
+                        </form>
+                    </div>
                 </div>
-                <div class="modal-body">
-              <form name="signinform" onsubmit="return false">
-             <div class="form-group">
-              <label for="InputUserNameSignIn">Username</label>
-              <input type="text" class="form-control" id="InputUserNameSignIn" aria-describedby="usernameHelp" required placeholder="Enter your username">
             </div>
-            <div class="form-group">
-              <label for="InputPasswordSignIn">Password</label>
-              <input type="password" class="form-control" id="InputPasswordSignIn" required placeholder="Enter your password">
-            </div>
-            <button type="submit" class="btn btn-success btn-block" id="modalsignin-btn">Sign In</button>
-            <h6 id="footnote">Not a member? <a id="footlink" data-dismiss="modal" href="#">Sign up</a>
-            </h6>
-        </form>
-          </div>
-          </div>
-          </div>
-          </div>
+        </div>
 
     </header>
-    <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
-
-    <!-- list of all posts starts here -->
     <div id="postscontainer">
 
         <!-- post 1 starts here -->
@@ -101,7 +104,9 @@
                     <p>‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
                     <span class="fas fa-trash trashhover" aria-hidden="true" onclick="showPostDialogue(card_1)"></span>
                 </div>
-                <p class="summary">Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
+                <p class="summary">Since JavaScript does not have any type-checking, either of these keywords can be
+                    used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are
+                    used for the same purpose, they are different.</p>
                 <span class="fas fa-ellipsis-h customspan" onclick="showPost(card_1)"></span>
             </div>
         </div>
@@ -118,7 +123,8 @@
                     <p>What is linting and how can it save you time?</p>
                     <span class="fas fa-trash trashhover" aria-hidden="true" onclick="showPostDialogue(card_2)"></span>
                 </div>
-                <p class="summary">One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
+                <p class="summary">One of the biggest challenges in software development is time. It’s something we
+                    can’t easily get more of, but linting can help us make the most out of the time we have.</p>
                 <span class="fas fa-ellipsis-h customspan" onclick="showPost(card_2)"></span>
             </div>
         </div>
@@ -135,7 +141,9 @@
                     <p>How to Get More Views on Your Tech Blog</p>
                     <span class="fas fa-trash trashhover" aria-hidden="true" onclick="showPostDialogue(card_3)"></span>
                 </div>
-                <p class="summary">If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
+                <p class="summary">If you're a developer with a Twitter account, you've already seen everyone and their
+                    cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a
+                    recognizable name in the industry.</p>
                 <span class="fas fa-ellipsis-h customspan" onclick="showPost(card_3)"></span>
             </div>
         </div>
@@ -152,7 +160,9 @@
                     <p>How to write easily describable code</p>
                     <span class="fas fa-trash trashhover" aria-hidden="true" onclick="showPostDialogue(card_4)"></span>
                 </div>
-                <p class="summary">When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
+                <p class="summary">When code is not describable using words, most people have to do some mental mapping
+                    to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping
+                    wrong. Different people will map to different words, which
                     leads to confusion when discussing the code.</p>
                 <span class="fas fa-ellipsis-h customspan" onclick="showPost(card_4)"></span>
             </div>
@@ -170,36 +180,44 @@
                     <p>Everything you should know about ‘module’ & ‘require’ in Node.js</p>
                     <span class="fas fa-trash trashhover" aria-hidden="true" onclick="showPostDialogue(card_5)"></span>
                 </div>
-                <p class="summary">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                <p class="summary">Node.js treats each JavaScript file as a separate module. For instance, if you have a
+                    file containing some code and this file is named xyz.js, then this file is treated as a module in
+                    Node, and you can say that you’ve created a module
                     named xyz.</p>
                 <span class="fas fa-ellipsis-h customspan" onclick="showPost(card_5)"></span>
             </div>
-        </div>    
+        </div>
     </div>
-<div class="modal fade" id="ModalDeletePost" tabindex="-1" aria-labelledby="ModalDeletePostLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <!--<div class="modal-header">
-              <h5 class="modal-title" id="ModalDeletePostLabel">Are you sure you want to delete this post?</h5>
-            </div>-->
-            <div class="modal-body">
-                <div id="postdialogue">
-                    <h5>Are you sure you want to delete this post?</h5>
-                    <div id="postbtndiv">
-                        <button type="button" class="btn btn-success btn-lg" id="postdelete-btn" onclick="deletePost()">Yes</button>
-                        <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal" id="dismiss-btn">No</button>
+    <div class="modal fade" id="ModalDeletePost" tabindex="-1" aria-labelledby="ModalDeletePostLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="postdialogue">
+                        <h5>Are you sure you want to delete this post?</h5>
+                        <div id="postbtndiv">
+                            <button type="button" class="btn btn-success btn-lg" id="postdelete-btn"
+                                onclick="deletePost()">Yes</button>
+                            <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal"
+                                id="dismiss-btn">No</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-   <script src="../scripts/common.js"></script>
-   <script src="../scripts/postslist.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/postslist.js"></script>
 </body>
 
 </html>
