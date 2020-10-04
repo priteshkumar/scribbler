@@ -1,0 +1,91 @@
+body{
+    height:100vh;
+    margin:8px;
+    position:relative;
+}
+
+#content{
+    display: flex;
+    flex-direction:column;
+    width:90%;
+    margin:0 auto;
+}
+
+#subject{
+    flex:100%;
+    align-self:center;
+}
+
+#subject > h5{
+    font-weight:bold;
+}
+
+#author{
+    flex:100%;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items:baseline;
+    padding-top:1%;
+    margin-bottom:10px;
+}
+
+#author > p {
+    font-family:'Ubuntu Mono', monospace;
+    font-size:100%;
+}
+
+#edit-btn{
+    align-self:baseline;
+}
+
+#description{
+    flex:100%;
+    align-self:flex-start;
+}
+
+#description > p {
+    font-size:90%;
+}
+
+#like > p{
+    margin-top:5px;
+    font-size:80%;
+    font-weight:lighter;
+}
+
+#addcomment{
+    flex:60%;
+    width:60%;
+    margin-top:10px;
+}
+
+#InputComment{
+    background-color: white;
+    font-size:80%;
+}
+
+#allcomments{
+    margin-top:25px;
+    flex:60%;
+    width:60%;
+}
+
+#allcomments > h6{
+    font-weight:550;
+}
+
+#comments{
+    background-color: lightgrey;
+    border:1px solid lightgrey;
+    padding:1%;
+    padding-bottom:0.3%;
+}
+
+#comments > p {
+    background-color: white;
+    padding:1%;
+    text-align:left;
+    margin-bottom:9px;
+}

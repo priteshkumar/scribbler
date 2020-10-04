@@ -1,7 +1,161 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        <script src="../scripts/post.js"></script>
-    </body>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8fc3a4ee99.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="../styles/common.css" rel="stylesheet">
+    <link href="../styles/post.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="masthead">
+        <div id="heading">
+            <h1 id="logo">ScriBBler</h1>
+            <h3 id="subheading">Explore,Imagine,Create</h3>
+        </div>
+        <button type="button" data-toggle="modal" data-target="#ModalSignUp" id="signup">Sign Up</button>
+        <button type="button" data-toggle="modal" data-target="#ModalSignIn" id="signin">Sign In</button>
+
+        <div class="modal fade" id="ModalSignUp" tabindex="-1" aria-labelledby="ModalSignUpLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalSignUpLabel">Get Started</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form name="signupform" onsubmit="return false">
+                            <div class="form-group">
+                                <label for="InputName">Name</label>
+                                <input type="text" class="form-control" id="InputName" aria-describedby="nameHelp"
+                                    required placeholder="Enter your Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputUserName">Username</label>
+                                <input type="text" class="form-control" id="InputUserName"
+                                    aria-describedby="usernameHelp" required placeholder="Enter your username">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputPassword">Password</label>
+                                <input type="password" class="form-control" id="InputPassword" required
+                                    placeholder="Enter your password">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputConfirmPassword">Confirm Password</label>
+                                <input type="password" class="form-control" id="InputConfirmPassword" required
+                                    placeholder="Re-enter your Password">
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block" id="modalsignup-btn">Sign
+                                Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="ModalSignIn" tabindex="-1" aria-labelledby="ModalSignInLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalSignInLabel">Welcome Back!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form name="signinform" onsubmit="return false">
+                            <div class="form-group">
+                                <label for="InputUserNameSignIn">Username</label>
+                                <input type="text" class="form-control" id="InputUserNameSignIn"
+                                    aria-describedby="usernameHelp" required placeholder="Enter your username">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputPasswordSignIn">Password</label>
+                                <input type="password" class="form-control" id="InputPasswordSignIn" required
+                                    placeholder="Enter your password">
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block" id="modalsignin-btn">Sign
+                                In</button>
+                            <h6 id="footnote">Not a member? <a id="footlink" data-dismiss="modal" href="#">Sign up</a>
+                            </h6>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <div id="subject">
+            <h5>Everything you should know about 'module' & 'require' in Node.js</h5>
+        </div>
+        <div id="author">
+            <p>Rusty Russell</p>
+            <button type="button" class="btn btn-danger btn-lg" id="edit-btn">Edit <i class="fas fa-edit"></i></button>
+        </div>
+        <div id="description">
+            <p>
+                Node.js treats each JavaScript file as a separate module. For instance, if you have a
+                file containing some code and this file is named xyz.js, then this file is treated as a module in
+                Node, and you can say that you’ve created a module named xyz.Let’s take an example to understand this
+                better.
+                You have a file named circle.js which consists of the logic for calculating the area & the circumference
+                of a
+                circle of a given radius, as given below:circle.jsYou can call circle.js file a module named circle.You
+                might
+                be wondering why is there a need to have multiple modules? You could have just written all the code in a
+                single module.
+                Well, it is very important to write modular code. By modular, I mean to say that your code should be
+                independent and
+                should be loosely coupled. Imagine that there’s a large application and you have all your code written
+                in just one place,
+                just one file. Too messy, right?This is the most significant advantage of having modules in Node.js.
+                Even if you define a
+                global variable in a module using var, let or const keywords, the variables are scoped locally to the
+                module rather than
+                being scoped globally. This happens because each module has a function wrapper of its own and the code
+                written inside one
+                function is local to that function and cannot be accessed outside this function.
+            </p>
+        </div>
+        <div id="like">
+            <button type="button" class="btn btn-danger btn-lg" id="like-btn">Like <i
+                    class="fas fa-thumbs-up"></i></button>
+            <p id="like-info">Be the first one to like this!</p>
+        </div>
+        <div id="addcomment">
+            <form name="commentform" id="commentform" onsubmit="addComments(event); return false;">
+                <div class="form-group">
+                    <textarea class="form-control" id="InputComment" rows="4" required
+                        placeholder="Leave a comment . . ."></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger btn-lg" id="comment-btn">Comment</button>
+            </form>
+        </div>
+        <div id="allcomments">
+            <h6>All Comments</h6>
+            <div id="comments">
+                <p>Node.js is great for reactive web apps!</p>
+                <p>Awesome event callback in node.js.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/post.js"></script>
+</body>
+
 </html>
