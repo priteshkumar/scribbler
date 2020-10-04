@@ -81,6 +81,7 @@ body{
     border:1px solid lightgrey;
     padding:1%;
     padding-bottom:0.3%;
+    display:none;
 }
 
 #comments > p {
