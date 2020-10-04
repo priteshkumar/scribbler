@@ -1,5 +1,8 @@
 body{
     background-color:#ffeedd;
+    height:100vh;
+    margin:8px;
+    position:relative;
 }
 
 #postscontainer{
@@ -76,10 +79,6 @@ body{
       line-height:1.2em;
       max-height:3.6em;
       margin-bottom:15px;
-  }
-
-  .trashhover{
-    /*align-self:baseline;*/
   }
 
   .trashhover:hover{
