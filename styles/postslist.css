@@ -19,7 +19,7 @@ body{
     border-radius: 20px;
     display:flex;
     flex-direction:row;
-    align-items:center;
+    align-items:stretch;
     margin-bottom:30px;
   }
   
@@ -28,13 +28,16 @@ body{
   }
   
   .author{
-      flex:7%;
-      width:7%;
+      flex:9%;
+      width:8%;
       color:grey;
       background-color:white;
       text-align:center;
       font-weight:700;
       font-size:110%;
+      align-self: center;
+      padding-top:2px;
+      padding-bottom:2px;
   }
   
   .content{
@@ -44,7 +47,9 @@ body{
       border-radius:0px 20px 20px 0px;
       display:flex;
       flex-direction:column;
-      padding-bottom:1%;
+      padding-top:5px;
+      padding-bottom:1.5%;
+      /*height:100%;*/
   }
   
   .subject{
@@ -54,7 +59,7 @@ body{
       display:flex;
       flex-direction:row;
       justify-content:space-between;
-      align-items:center;
+      align-items:baseline;
       padding-left:2.7%;
       padding-right:2.5%;
       margin-bottom:0px;
@@ -71,10 +76,10 @@ body{
       line-height:1.2em;
       max-height:3.6em;
       margin-bottom:15px;
-      /*text-overflow: initial;
-     display: -webkit-box;
-     -webkit-line-clamp: 3; 
-     -webkit-box-orient: vertical;*/
+  }
+
+  .trashhover{
+    /*align-self:baseline;*/
   }
 
   .trashhover:hover{

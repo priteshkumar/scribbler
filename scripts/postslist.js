@@ -6,8 +6,8 @@ function showPostDialogue(card){
 
 function deletePost(){
     var card = $('#ModalDeletePost').data('data-card');
-    card.remove();
     $('#ModalDeletePost').modal('toggle');
+    card.remove();
 }
 
 function showPost(card){
