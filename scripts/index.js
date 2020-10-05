@@ -1,5 +1,5 @@
-var blogslink = '../html/postslist.html';
+var postslink = './html/postslist.html';
 
-function showBlogs(event){
-    window.location.href=blogslink;
+function showBlogs(event) {
+    window.location.href = postslink;
 }
