@@ -13,17 +13,6 @@ function initUI() {
 
 //initUI();
 
-function addComments(e) {
-    var inputComment = document.getElementById("InputComment");
-    var comment = inputComment.value;
-    var comments = document.getElementById("comments");
-    if (comments.style.display == '') {
-        comments.style.display = 'block';
-    }
-    comments.innerHTML += '<p>' + comment + '</p>';
-    inputComment.value = inputComment.defaultValue;
-}
-
 function enableEditMode(e, editBtn) {
     console.log(editBtn);
 
@@ -31,7 +20,7 @@ function enableEditMode(e, editBtn) {
     var desciption = document.getElementById("description");
     console.log(subject.contentEditable);
     console.log(desciption.contentEditable);
-    
+
     var subject = document.getElementById("subject");
     var desciption = document.getElementById("description");
     subject.style.border = '2px solid pink';
@@ -57,7 +46,7 @@ function enableEditMode(e, editBtn) {
 
     var saveBtn = document.getElementById("save-btn");
     saveBtn.style.display = 'inline-block';
-    saveBtn.classList.toggle("btn");
+    //saveBtn.classList.toggle("btn");
 }
 
 function updateContent(e, saveBtn) {
@@ -81,4 +70,27 @@ function updateContent(e, saveBtn) {
     }
     saveBtn.style.display = "none";
     saveBtn.classList.toggle("btn");
+}
+
+function addComments(e) {
+    var inputComment = document.getElementById("InputComment");
+    var comment = inputComment.value;
+    var comments = document.getElementById("comments");
+    if (comments.style.display == '') {
+        comments.style.display = 'block';
+    }
+    comments.innerHTML += '<p>' + comment + '</p>';
+    inputComment.value = inputComment.defaultValue;
+}
+
+function updateLikes(event, likeBtn) {
+    var likeCounter = Number(likeBtn.getAttribute('data-likes'));
+    if (likeCounter == 0) {
+        likeBtn.innerHTML = 'Liked ' + '<i class="fas fa-thumbs-up"></i>';
+    }
+    likeCounter = likeCounter + 1;
+    var likeInfo = document.getElementById('like-info');
+    likeBtn.setAttribute("data-likes",String(likeCounter));
+    var likeMsg = likeCounter == 1 ?' person likes this!':' people like this!';
+    likeInfo.innerText = likeCounter + likeMsg;
 }
