@@ -69,6 +69,8 @@ function updateContent(e, saveBtn) {
     var desciption = document.getElementById("description");
     subject.style.border = "";
     desciption.style.border = "";
+    subject.contentEditable = "false";
+    desciption.contentEditable = "false";
     var editBtn = document.getElementById("edit-btn");
     editBtn.style.display = "inline-block";
 
@@ -81,5 +83,6 @@ function updateContent(e, saveBtn) {
         classes.push("btn");
         editBtn.className = classes.join(" ");
     }
+    editBtn.onclick = "";
     saveBtn.remove();
 }
