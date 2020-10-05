@@ -92,38 +92,12 @@
     </header>
     <div id="content">
         <div id="subject">
-            <h5>Everything you should know about 'module' & 'require' in Node.js</h5>
         </div>
         <div id="author">
-            <p>Rusty Russell</p>
             <button type="button" class="btn btn-danger btn-lg" id="edit-btn" onclick="enableEditMode(event,this)">Edit <i class="fas fa-edit"></i></button>
             <button type="button" class="btn-danger btn-lg" id="save-btn" onclick="updateContent(event,this)">Save <i class="fas fa-save"></i></button>
         </div>
         <div id="description">
-            <!-- remove this later-->
-            <p>
-                Node.js treats each JavaScript file as a separate module. For instance, if you have a
-                file containing some code and this file is named xyz.js, then this file is treated as a module in
-                Node, and you can say that you’ve created a module named xyz.Let’s take an example to understand this
-                better.
-                You have a file named circle.js which consists of the logic for calculating the area & the circumference
-                of a
-                circle of a given radius, as given below:circle.jsYou can call circle.js file a module named circle.You
-                might
-                be wondering why is there a need to have multiple modules? You could have just written all the code in a
-                single module.
-                Well, it is very important to write modular code. By modular, I mean to say that your code should be
-                independent and
-                should be loosely coupled. Imagine that there’s a large application and you have all your code written
-                in just one place,
-                just one file. Too messy, right?This is the most significant advantage of having modules in Node.js.
-                Even if you define a
-                global variable in a module using var, let or const keywords, the variables are scoped locally to the
-                module rather than
-                being scoped globally. This happens because each module has a function wrapper of its own and the code
-                written inside one
-                function is local to that function and cannot be accessed outside this function.
-            </p>
         </div>
         <div id="like">
             <button type="button" class="btn btn-danger btn-lg" id="like-btn" data-likes="0" onclick="updateLikes(event,this)">Like <i

@@ -57,6 +57,8 @@ body{
 
 #description > p {
     font-size:90%;
+    text-align:justify;
+    word-break:keep-all;
 }
 
 #like > p{
