@@ -31,12 +31,7 @@ function enableEditMode(e, editBtn) {
     var desciption = document.getElementById("description");
     console.log(subject.contentEditable);
     console.log(desciption.contentEditable);
-    //once content is updated
-    //it cannot be editable further, return
-    if (subject.contentEditable == "true" || desciption.contentEditable == "true") {
-        return;
-    }
-
+    
     var subject = document.getElementById("subject");
     var desciption = document.getElementById("description");
     subject.style.border = '2px solid pink';
@@ -62,6 +57,7 @@ function enableEditMode(e, editBtn) {
 
     var saveBtn = document.getElementById("save-btn");
     saveBtn.style.display = 'inline-block';
+    saveBtn.classList.toggle("btn");
 }
 
 function updateContent(e, saveBtn) {
@@ -83,6 +79,6 @@ function updateContent(e, saveBtn) {
         classes.push("btn");
         editBtn.className = classes.join(" ");
     }
-    editBtn.onclick = "";
-    saveBtn.remove();
+    saveBtn.style.display = "none";
+    saveBtn.classList.toggle("btn");
 }
