@@ -13,11 +13,16 @@ body{
 
 #subject{
     flex:100%;
+    width:100%;
     align-self:center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #subject > h5{
     font-weight:bold;
+    text-align: center;
 }
 
 #author{
@@ -38,6 +43,11 @@ body{
 
 #edit-btn{
     align-self:baseline;
+}
+
+#save-btn{
+    align-self: baseline;
+    display:none;
 }
 
 #description{
