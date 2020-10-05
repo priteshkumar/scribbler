@@ -1,118 +1,119 @@
-body{
-    height:100vh;
-    margin:8px;
-    position:relative;
+body {
+    height: 100vh;
+    margin: 8px;
+    position: relative;
 }
 
-#content{
+#content {
     display: flex;
-    flex-direction:column;
-    width:90%;
-    margin:0 auto;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
 }
 
-#subject{
-    flex:100%;
-    width:100%;
-    align-self:center;
-    display:flex;
+#subject {
+    flex: 100%;
+    width: 100%;
+    align-self: center;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#subject > h5{
-    font-weight:bold;
+#subject>h5 {
+    font-weight: bold;
     text-align: center;
 }
 
-#author{
-    flex:100%;
-    width:100%;
-    display:flex;
-    flex-direction:row;
+#author {
+    flex: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items:baseline;
-    padding-top:1%;
-    margin-bottom:10px;
+    align-items: baseline;
+    padding-top: 1%;
+    margin-bottom: 10px;
 }
 
-#author > p {
-    font-family:'Ubuntu Mono', monospace;
-    font-size:100%;
+#author>p {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 100%;
 }
 
-#edit-btn{
-    align-self:baseline;
-}
-
-#save-btn{
+#edit-btn {
     align-self: baseline;
-    display:none;
 }
 
-#description{
-    flex:100%;
-    align-self:flex-start;
+#save-btn {
+    align-self: baseline;
+    display: none;
 }
 
-#description > p {
-    font-size:90%;
-    text-align:justify;
-    word-break:keep-all;
+#description {
+    flex: 100%;
+    align-self: flex-start;
 }
 
-#like > p{
-    margin-top:5px;
-    font-size:80%;
-    font-weight:lighter;
+#description>p {
+    font-size: 90%;
+    text-align: justify;
+    word-break: keep-all;
 }
 
-#addcomment{
-    flex:60%;
-    width:60%;
-    margin-top:10px;
+#like>p {
+    margin-top: 5px;
+    font-size: 80%;
+    font-weight: lighter;
 }
 
-#InputComment{
+#addcomment {
+    flex: 60%;
+    width: 60%;
+    margin-top: 10px;
+}
+
+#InputComment {
     background-color: white;
-    font-size:80%;
+    font-size: 80%;
 }
 
-#allcomments{
-    margin-top:25px;
-    flex:60%;
-    width:60%;
+#allcomments {
+    margin-top: 25px;
+    flex: 60%;
+    width: 60%;
 }
 
-#allcomments > h6{
-    font-weight:550;
+#allcomments>h6 {
+    font-weight: 550;
 }
 
-#comments{
+#comments {
     background-color: lightgrey;
-    border:1px solid lightgrey;
-    padding:1%;
-    padding-bottom:0.3%;
-    display:none;
+    border: 1px solid lightgrey;
+    padding: 1%;
+    padding-bottom: 0.3%;
+    display: none;
 }
 
-#comments > p {
+#comments>p {
     background-color: white;
-    padding:1%;
-    text-align:left;
-    margin-bottom:9px;
-    font-size:90%;
+    padding: 1%;
+    text-align: left;
+    margin-bottom: 9px;
+    font-size: 100%;
+    font-family: cursive;
 }
 
-.btn-lg{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding-top:0.27rem;
-    padding-bottom:0.27rem;
-    padding-left:1rem;
-    padding-right:1rem;
-    border-radius:0;
-    font-size:.7rem;
-    margin-bottom:5px;
-    font-weight:850;
+.btn-lg {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding-top: 0.27rem;
+    padding-bottom: 0.27rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0;
+    font-size: .7rem;
+    margin-bottom: 5px;
+    font-weight: 850;
     text-align: center;
-  }
+}
